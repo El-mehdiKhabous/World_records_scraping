@@ -1,0 +1,73 @@
+WATCHLIST_PROFILES = {
+    "sprint": [
+        "50 Metres",
+        "60 Metres",
+        "100 Metres",
+        "200 Metres",
+        "400 Metres",
+    ],
+    "hurdles": [
+        "50 Metres Hurdles",
+        "60 Metres Hurdles",
+        "100 Metres Hurdles",
+        "110 Metres Hurdles",
+        "400 Metres Hurdles",
+    ],
+    "relay": [
+        "4x100 Metres Relay",
+        "4x200 Metres Relay",
+        "4x400 Metres Relay",
+        "4x800 Metres Relay",
+        "4x1500 Metres Relay",
+        "4x400 Metres Relay Mixed",
+    ],
+    "middle_distance": [
+        "800 Metres",
+        "1000 Metres",
+        "1500 Metres",
+        "Mile",
+        "2000 Metres",
+        "3000 Metres",
+    ],
+    "steeplechase": [
+        "2000 Metres Steeplechase",
+        "3000 Metres Steeplechase",
+    ],
+    "long_distance": [
+        "5000 Metres",
+        "10000 Metres",
+        "One Hour Run",
+    ],
+    "jumps": [
+        "High Jump",
+        "Pole Vault",
+        "Long Jump",
+        "Triple Jump",
+    ],
+    "throws": [
+        "Shot Put",
+        "Discus Throw",
+        "Hammer Throw",
+        "Javelin Throw",
+        "Weight Throw",
+    ],
+    "walks": [
+        "3000 Metres Race Walk",
+        "5000 Metres Race Walk",
+        "10 Kilometres Race Walk",
+        "20 Kilometres Race Walk",
+        "35 Kilometres Race Walk",
+        "50 Kilometres Race Walk",
+    ],
+    "road": [
+        "5 Kilometres",
+        "10 Kilometres",
+        "Half Marathon",
+        "Marathon",
+    ],
+    "combined": [
+        "Pentathlon",
+        "Heptathlon",
+        "Decathlon",
+    ],
+}

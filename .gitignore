@@ -1,0 +1,36 @@
+# 1) Environnements virtuels Python
+.venv/
+venv/
+env/
+
+# 2) Données générées par le programme
+data/
+
+# 3) Secrets / variables d'environnement
+.env
+.env.*
+!.env.example
+
+# 4) Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 5) Logs et fichiers temporaires
+*.log
+*.tmp
+*.temp
+*.bak
+
+# 6) Fichiers d'éditeurs
+.vscode/
+.idea/
+
+# 7) Fichiers système
+.DS_Store
+Thumbs.db
+
+# 8) Cache d'outils Python
+.pytest_cache/
+.mypy_cache/
