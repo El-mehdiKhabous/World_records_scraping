@@ -1,24 +1,57 @@
+Oui. Voici un **README très simple**, prêt à copier dans `README.md`.
+
+````md
 # TrackList
 
-TrackList est un projet Python de web scraping qui surveille les records du site World Athletics à l’aide de Selenium. Un projet réalisé par Khabous El Mehdi et Gazzar Abdellah
+TrackList est un projet Python qui scrape les records du site World Athletics avec Selenium.
 
-Le programme récupère les données des onglets **Women**, **Men** et **Mixed**, génère une watchlist selon un profil choisi, compare les résultats avec les exécutions précédentes et envoie une alerte Telegram en cas de changement.
+Il récupère les données des onglets **Women**, **Men** et **Mixed**, génère une watchlist selon un profil choisi, puis envoie une alerte Telegram si un changement est détecté.
 
 ## Objectif
 
-L’objectif du projet est d’automatiser une veille sur les records World Athletics afin d’éviter une vérification manuelle répétitive du site.
+Automatiser la surveillance des records pour éviter de vérifier le site manuellement.
 
-## Fonctionnalités
+## Installation
 
-- Scraping des records depuis World Athletics
-- Parcours des onglets Women / Men / Mixed
-- Génération d’un fichier `data/records.csv`
-- Génération d’une watchlist par profil
-- Export de fichiers CSV, HTML et TXT
-- Comparaison avec la watchlist précédente
-- Notification Telegram en cas de changement
-- Mode exécution unique avec `--once`
-- Mode surveillance continue toutes les 8 heures
+1. Installer les dépendances :
+
+```bash
+pip install -r requirements.txt
+````
+
+2. Créer un fichier `.env` à la racine du projet avec :
+
+```env
+TELEGRAM_BOT_TOKEN=your_token
+TELEGRAM_BOT_USERNAME=your_bot_username
+TELEGRAM_GROUP_CHAT_ID=your_group_chat_id
+TELEGRAM_GROUP_INVITE_LINK=your_group_invite_link
+```
+
+## Utilisation
+
+Lancer le programme :
+
+```bash
+python -m tracklist.main --profile sprint
+```
+
+Faire une seule exécution :
+
+```bash
+python -m tracklist.main --profile sprint --once
+```
+
+Sous Windows, si tu lances avec le Python de `.venv` :
+
+```bash
+.\.venv\Scripts\python.exe -m tracklist.main --profile sprint
+```
+
+## Dépendances
+
+* selenium
+* python-dotenv
 
 ## Structure du projet
 
@@ -30,62 +63,26 @@ tracklist/
 ├── scraper.py
 ├── notifier.py
 ├── main.py
-
 └── auto_runner.py
-
-Utilisation
-
-Lancer le programme :
-
-python -m tracklist.main --profile sprint
-
-Faire une seule exécution :
-
-python -m tracklist.main --profile sprint --once
-
-Sous Windows, si tu lances avec le Python de .venv :
-
-.\.venv\Scripts\python.exe -m tracklist.main --profile sprint
-Dépendances
-
-selenium
-
-python-dotenv
-
-Structure du projet
-tracklist/
-├── config.py
-├── driver_factory.py
-├── profiles.py
-├── scraper.py
-├── notifier.py
-├── main.py
-└── auto_runner.py
-
-
-## Utilisation
-
-Lancer le programme :
-
-python -m tracklist.main --profile sprint
-
-Faire une seule exécution :
-
-python -m tracklist.main --profile sprint --once
-
-Sous Windows, si tu lances avec le Python de .venv :
-
-.\.venv\Scripts\python.exe -m tracklist.main --profile sprint
-
+```
 
 ## Données générées
 
-Le programme crée des fichiers dans data/, par exemple :
+Le programme crée des fichiers dans `data/`, par exemple :
 
-records.csv
+* `records.csv`
+* `<profil>_watchlist.csv`
+* `<profil>_watchlist.html`
+* `<profil>_alerts.txt`
 
-<profil>_watchlist.csv
+## Avertissement
 
-<profil>_watchlist.html
+Ce projet est un outil éducatif.
+Le scraping doit respecter les conditions d’utilisation du site source.
 
-<profil>_alerts.txt
+```
+
+Copie **exactement ça** dans `README.md`.
+
+Ensuite, dis-moi juste : **README fait**.
+```
