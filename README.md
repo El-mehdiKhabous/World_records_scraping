@@ -30,4 +30,62 @@ tracklist/
 ├── scraper.py
 ├── notifier.py
 ├── main.py
+
 └── auto_runner.py
+
+Utilisation
+
+Lancer le programme :
+
+python -m tracklist.main --profile sprint
+
+Faire une seule exécution :
+
+python -m tracklist.main --profile sprint --once
+
+Sous Windows, si tu lances avec le Python de .venv :
+
+.\.venv\Scripts\python.exe -m tracklist.main --profile sprint
+Dépendances
+
+selenium
+
+python-dotenv
+
+Structure du projet
+tracklist/
+├── config.py
+├── driver_factory.py
+├── profiles.py
+├── scraper.py
+├── notifier.py
+├── main.py
+└── auto_runner.py
+
+
+## Utilisation
+
+Lancer le programme :
+
+python -m tracklist.main --profile sprint
+
+Faire une seule exécution :
+
+python -m tracklist.main --profile sprint --once
+
+Sous Windows, si tu lances avec le Python de .venv :
+
+.\.venv\Scripts\python.exe -m tracklist.main --profile sprint
+
+
+## Données générées
+
+Le programme crée des fichiers dans data/, par exemple :
+
+records.csv
+
+<profil>_watchlist.csv
+
+<profil>_watchlist.html
+
+<profil>_alerts.txt
